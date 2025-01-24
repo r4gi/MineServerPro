@@ -8,16 +8,17 @@ class FolderSelector(QWidget):
     def initUI(self):
         layout = QVBoxLayout()
 
-        # フォルダ選択関連のUI
         self.folder_label = QLabel('サーバー配置フォルダを選択:')
         self.folder_input = QLineEdit()
         self.browse_button = QPushButton('参照')
         self.browse_button.clicked.connect(self.browse_folder)
 
-        # レイアウトに追加
+        self.download_button = QPushButton('ダウンロード開始')
+
         layout.addWidget(self.folder_label)
         layout.addWidget(self.folder_input)
         layout.addWidget(self.browse_button)
+        layout.addWidget(self.download_button)
 
         self.setLayout(layout)
 
